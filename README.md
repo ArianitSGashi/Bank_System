@@ -59,7 +59,7 @@ This project is a Spring Boot Restful Web Service for a bank system. The system 
     cd bank-system
     ```
 
-    You can run the application from your IDE by running the `BankApplication` main class.
+    You can run the application from your IDE by running the `BanksystemApplication` main class.
 
    Alternatively: 
 
