@@ -113,12 +113,12 @@ You can use Postman tool: It provides a user-friendly interface for building and
 
 ```json
 {
-  "id": 1,
-  "name": "Test Bank",
-  "transactionFlatFeeAmount": 10.0,
-  "transactionPercentFeeValue": 5.0,
-  "totalTransactionFeeAmount": 0.0,
-  "totalTransferAmount": 0.0
+    "id": 1,
+    "name": "Test Bank",
+    "totalTransactionFeeAmount": 0.0,
+    "totalTransferAmount": 0.0,
+    "transactionFlatFeeAmount": 10.0,
+    "transactionPercentFeeValue": 5.0
 }
 ```
 
@@ -139,14 +139,14 @@ You can use Postman tool: It provides a user-friendly interface for building and
 
 ```json
 [
-  {
-    "id": 1,
-    "name": "Test Bank",
-    "transactionFlatFeeAmount": 10.0,
-    "transactionPercentFeeValue": 5.0,
-    "totalTransactionFeeAmount": 0.0,
-    "totalTransferAmount": 0.0
-  }
+    {
+        "id": 1,
+        "name": "Test Bank",
+        "totalTransactionFeeAmount": 0.0,
+        "totalTransferAmount": 0.0,
+        "transactionFlatFeeAmount": 10.0,
+        "transactionPercentFeeValue": 5.0
+    }
 ]
 ```
 ## 3. Get a Bank by ID
@@ -166,12 +166,12 @@ You can use Postman tool: It provides a user-friendly interface for building and
 
 ```json
 {
-  "id": 1,
-  "name": "Test Bank",
-  "transactionFlatFeeAmount": 10.0,
-  "transactionPercentFeeValue": 5.0,
-  "totalTransactionFeeAmount": 0.0,
-  "totalTransferAmount": 0.0
+    "id": 1,
+    "name": "Test Bank",
+    "totalTransactionFeeAmount": 0.0,
+    "totalTransferAmount": 0.0,
+    "transactionFlatFeeAmount": 10.0,
+    "transactionPercentFeeValue": 5.0
 }
 ```
 ## Account Endpoints
@@ -207,15 +207,19 @@ You can use Postman tool: It provides a user-friendly interface for building and
 
 ```json
 {
-  "id": 1,
-  "name": "Test User",
-  "balance": 100.0,
-  "bank": {
     "id": 1,
-    "name": "Test Bank",
-    "transactionFlatFeeAmount": 10.0,
-    "transactionPercentFeeValue": 5.0
-  }
+    "name": "Test User",
+    "balance": 100.0,
+    "bank": {
+        "id": 1,
+        "name": "Test Bank",
+        "totalTransactionFeeAmount": 0.0,
+        "totalTransferAmount": 0.0,
+        "transactionFlatFeeAmount": 10.0,
+        "transactionPercentFeeValue": 5.0
+    },
+    "originatingTransactions": [],
+    "resultingTransactions": []
 }
 ```
 ## 5. Get All Accounts
@@ -235,17 +239,21 @@ You can use Postman tool: It provides a user-friendly interface for building and
 
 ```json
 [
-  {
-    "id": 1,
-    "name": "Test User",
-    "balance": 100.0,
-    "bank": {
-      "id": 1,
-      "name": "Test Bank",
-      "transactionFlatFeeAmount": 10.0,
-      "transactionPercentFeeValue": 5.0
+    {
+        "id": 1,
+        "name": "Test User",
+        "balance": 100.0,
+        "bank": {
+            "id": 1,
+            "name": "Test Bank",
+            "totalTransactionFeeAmount": 0.0,
+            "totalTransferAmount": 0.0,
+            "transactionFlatFeeAmount": 10.0,
+            "transactionPercentFeeValue": 5.0
+        },
+        "originatingTransactions": [],
+        "resultingTransactions": []
     }
-  }
 ]
 ```
 ## 6. Get an Account by ID
@@ -265,15 +273,19 @@ You can use Postman tool: It provides a user-friendly interface for building and
 
 ```json
 {
-  "id": 1,
-  "name": "Test User",
-  "balance": 100.0,
-  "bank": {
     "id": 1,
-    "name": "Test Bank",
-    "transactionFlatFeeAmount": 10.0,
-    "transactionPercentFeeValue": 5.0
-  }
+    "name": "Test User",
+    "balance": 100.0,
+    "bank": {
+        "id": 1,
+        "name": "Test Bank",
+        "totalTransactionFeeAmount": 0.0,
+        "totalTransferAmount": 0.0,
+        "transactionFlatFeeAmount": 10.0,
+        "transactionPercentFeeValue": 5.0
+    },
+    "originatingTransactions": [],
+    "resultingTransactions": []
 }
 ```
 ## 7. Get Accounts by Bank ID
@@ -293,19 +305,25 @@ You can use Postman tool: It provides a user-friendly interface for building and
 
 ```json
 [
-  {
-    "id": 1,
-    "name": "Test User",
-    "balance": 100.0,
-    "bank": {
-      "id": 1,
-      "name": "Test Bank"
+    {
+        "id": 1,
+        "name": "Test User",
+        "balance": 100.0,
+        "bank": {
+            "id": 1,
+            "name": "Test Bank",
+            "totalTransactionFeeAmount": 0.0,
+            "totalTransferAmount": 0.0,
+            "transactionFlatFeeAmount": 10.0,
+            "transactionPercentFeeValue": 5.0
+        },
+        "originatingTransactions": [],
+        "resultingTransactions": []
     }
-  }
 ]
 ```
 
-## Transaction Endpoints
+## Transaction Endpoints (before trying to perform a transaction, please insert another account)
 
 ### 8. Perform a Transaction
 
@@ -336,12 +354,12 @@ You can use Postman tool: It provides a user-friendly interface for building and
 
 ```json
 {
-  "id": 1,
-  "amount": 20.0,
-  "originatingAccountId": 1,
-  "resultingAccountId": 2,
-  "reason": "Test transfer",
-  "transactionDate": "2024-05-19T00:00:00.000+00:00"
+    "id": 1,
+    "amount": 20.0,
+    "originatingAccountId": 1,
+    "resultingAccountId": 2,
+    "reason": "Test transfer",
+    "transactionDate": "2024-05-19T15:20:51.787+00:00"
 }
 ```
 ## 9. Get Transactions for an Account
@@ -361,15 +379,15 @@ You can use Postman tool: It provides a user-friendly interface for building and
 
 ```json
 [
-  {
-    "id": 1,
-    "amount": 20.0,
-    "originatingAccountId": 1,
-    "resultingAccountId": 2,
-    "reason": "Test transfer",
-    "transactionDate": "2024-05-19T00:00:00.000+00:00",
-    "accountId": 1
-  }
+    {
+        "id": 1,
+        "amount": 20.0,
+        "originatingAccountId": 1,
+        "resultingAccountId": 2,
+        "reason": "Test transfer",
+        "transactionDate": "2024-05-19T15:20:51.787+00:00",
+        "accountId": 1
+    }
 ]
 ```
 ## 10. Withdraw from Account
@@ -382,7 +400,7 @@ You can use Postman tool: It provides a user-friendly interface for building and
 ```json
 {
   "accountId": 1,
-  "amount": 100
+  "amount": 20
 }
 ```
 **Steps:**
@@ -399,13 +417,28 @@ You can use Postman tool: It provides a user-friendly interface for building and
 
 ```json
 {
-  "id": 1,
-  "name": "Test User",
-  "balance": 0.0,
-  "bank": {
     "id": 1,
-    "name": "Test Bank"
-  }
+    "name": "Test User",
+    "balance": 80.0,
+    "bank": {
+        "id": 1,
+        "name": "Test Bank",
+        "totalTransactionFeeAmount": 10.0,
+        "totalTransferAmount": 20.0,
+        "transactionFlatFeeAmount": 10.0,
+        "transactionPercentFeeValue": 5.0
+    },
+    "originatingTransactions": [
+        {
+            "id": 1,
+            "amount": 20.0,
+            "originatingAccountId": 1,
+            "resultingAccountId": 2,
+            "reason": "Test transfer",
+            "transactionDate": "2024-05-19T15:20:51.787+00:00"
+        }
+    ],
+    "resultingTransactions": []
 }
 ```
 ## 11. Deposit to Account
@@ -435,13 +468,28 @@ You can use Postman tool: It provides a user-friendly interface for building and
 
 ```json
 {
-  "id": 1,
-  "name": "Test User",
-  "balance": 200.0,
-  "bank": {
     "id": 1,
-    "name": "Test Bank"
-  }
+    "name": "Test User",
+    "balance": 280.0,
+    "bank": {
+        "id": 1,
+        "name": "Test Bank",
+        "totalTransactionFeeAmount": 10.0,
+        "totalTransferAmount": 20.0,
+        "transactionFlatFeeAmount": 10.0,
+        "transactionPercentFeeValue": 5.0
+    },
+    "originatingTransactions": [
+        {
+            "id": 1,
+            "amount": 20.0,
+            "originatingAccountId": 1,
+            "resultingAccountId": 2,
+            "reason": "Test transfer",
+            "transactionDate": "2024-05-19T15:20:51.787+00:00"
+        }
+    ],
+    "resultingTransactions": []
 }
 ```
 ## 12. Get Bank Total Transaction Fee Amount
@@ -481,7 +529,7 @@ You can use Postman tool: It provides a user-friendly interface for building and
 
 ```json
 {
- 300.0 //depends from transactions
+ 20.0 //depends from transactions
 }
 ```
 
