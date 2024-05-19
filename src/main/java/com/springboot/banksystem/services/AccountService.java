@@ -48,7 +48,7 @@ public class AccountService {
                 .map(AccountMapper::toAccountDTO)
                 .orElseThrow(() -> new NotFoundException("Account not found"));
     }
-
+    @Transactional
     public List<AccountDTO> getAccountsByBankId(Long bankId) {
         Bank bank = bankRepository.findById(bankId)
                 .orElseThrow(() -> new NotFoundException("Bank not found"));
