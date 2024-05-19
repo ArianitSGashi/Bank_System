@@ -487,7 +487,9 @@ You can use Postman tool: It provides a user-friendly interface for building and
 
 ## Testing
 
-To run the tests, use the following command:
+To run the tests:
+You can run the tests from your IDE by running the `AccountServiceTest`, `BankServiceTest`, `TransactionServiceTest` classes,
+or you can run the tests using the following command:
 
 ```bash
 mvn test
