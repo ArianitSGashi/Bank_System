@@ -419,7 +419,7 @@ You can use Postman tool: It provides a user-friendly interface for building and
 {
     "id": 1,
     "name": "Test User",
-    "balance": 80.0,
+    "balance": 50.0,
     "bank": {
         "id": 1,
         "name": "Test Bank",
@@ -470,7 +470,7 @@ You can use Postman tool: It provides a user-friendly interface for building and
 {
     "id": 1,
     "name": "Test User",
-    "balance": 280.0,
+    "balance": 250.0,
     "bank": {
         "id": 1,
         "name": "Test Bank",
